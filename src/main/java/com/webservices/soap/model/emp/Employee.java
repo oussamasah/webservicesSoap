@@ -2,7 +2,7 @@
 // Ce fichier a été généré par l'implémentation de référence JavaTM Architecture for XML Binding (JAXB), v2.2.7 
 // Voir <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
 // Toute modification apportée à ce fichier sera perdue lors de la recompilation du schéma source. 
-// Généré le : 2023.07.05 à 11:27:39 PM WAT 
+// Généré le : 2023.07.06 à 01:01:40 AM WAT 
 //
 
 
@@ -25,9 +25,10 @@ import javax.xml.bind.annotation.XmlType;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
  *         &lt;element name="id" type="{http://www.w3.org/2001/XMLSchema}int"/>
- *         &lt;element name="name" type="{http://www.w3.org/2001/XMLSchema}string"/>
- *         &lt;element name="salary" type="{http://www.w3.org/2001/XMLSchema}double"/>
- *         &lt;element name="job" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="firstname" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="lastname" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="jobtitle" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="email" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -39,18 +40,22 @@ import javax.xml.bind.annotation.XmlType;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "employee", propOrder = {
     "id",
-    "name",
-    "salary",
-    "job"
+    "firstname",
+    "lastname",
+    "jobtitle",
+    "email"
 })
 public class Employee {
 
     protected int id;
     @XmlElement(required = true)
-    protected String name;
-    protected double salary;
+    protected String firstname;
     @XmlElement(required = true)
-    protected String job;
+    protected String lastname;
+    @XmlElement(required = true)
+    protected String jobtitle;
+    @XmlElement(required = true)
+    protected String email;
 
     /**
      * Obtient la valeur de la propriété id.
@@ -69,67 +74,99 @@ public class Employee {
     }
 
     /**
-     * Obtient la valeur de la propriété name.
+     * Obtient la valeur de la propriété firstname.
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getName() {
-        return name;
+    public String getFirstname() {
+        return firstname;
     }
 
     /**
-     * Définit la valeur de la propriété name.
+     * Définit la valeur de la propriété firstname.
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setName(String value) {
-        this.name = value;
+    public void setFirstname(String value) {
+        this.firstname = value;
     }
 
     /**
-     * Obtient la valeur de la propriété salary.
-     * 
-     */
-    public double getSalary() {
-        return salary;
-    }
-
-    /**
-     * Définit la valeur de la propriété salary.
-     * 
-     */
-    public void setSalary(double value) {
-        this.salary = value;
-    }
-
-    /**
-     * Obtient la valeur de la propriété job.
+     * Obtient la valeur de la propriété lastname.
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getJob() {
-        return job;
+    public String getLastname() {
+        return lastname;
     }
 
     /**
-     * Définit la valeur de la propriété job.
+     * Définit la valeur de la propriété lastname.
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setJob(String value) {
-        this.job = value;
+    public void setLastname(String value) {
+        this.lastname = value;
+    }
+
+    /**
+     * Obtient la valeur de la propriété jobtitle.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getJobtitle() {
+        return jobtitle;
+    }
+
+    /**
+     * Définit la valeur de la propriété jobtitle.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setJobtitle(String value) {
+        this.jobtitle = value;
+    }
+
+    /**
+     * Obtient la valeur de la propriété email.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getEmail() {
+        return email;
+    }
+
+    /**
+     * Définit la valeur de la propriété email.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setEmail(String value) {
+        this.email = value;
     }
 
 }
